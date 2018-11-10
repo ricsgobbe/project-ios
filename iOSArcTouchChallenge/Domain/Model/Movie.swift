@@ -11,6 +11,7 @@ import SwiftyJSON
 
 struct Movie {
     
+    let id: Int
     let name: String
     let backdropImage: String
     let genres: [Int]
@@ -18,6 +19,7 @@ struct Movie {
     let releaseDate: String
     
     init(json: JSON) {
+        id = json["id"].intValue
         name = json["name"].stringValue
         backdropImage = json["backdrop_image"].stringValue
         genres = json["genres"].arrayValue.map({ $0.intValue })

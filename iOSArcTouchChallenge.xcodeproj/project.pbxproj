@@ -18,6 +18,11 @@
 		04A6986D219659560071C9C5 /* MovieDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A6986C219659560071C9C5 /* MovieDetail.swift */; };
 		04A6986F21965A730071C9C5 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A6986E21965A730071C9C5 /* Genre.swift */; };
 		04A6987121965B220071C9C5 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A6987021965B220071C9C5 /* Configuration.swift */; };
+		04A698772196626B0071C9C5 /* MoyaPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A698762196626B0071C9C5 /* MoyaPlugin.swift */; };
+		04A69879219662910071C9C5 /* MoyaServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A69878219662910071C9C5 /* MoyaServices.swift */; };
+		04A6987B219663040071C9C5 /* MovieAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A6987A219663040071C9C5 /* MovieAPI.swift */; };
+		04A6987F219664280071C9C5 /* MovieDatasourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A6987E219664280071C9C5 /* MovieDatasourceProtocol.swift */; };
+		04A698812196676F0071C9C5 /* MovieDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A698802196676F0071C9C5 /* MovieDataSource.swift */; };
 		930DB605D5DDFACBDC9C6A83 /* Pods_iOSArcTouchChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9A8FAE4297F5FE2D2B30EF8 /* Pods_iOSArcTouchChallengeTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +51,11 @@
 		04A6986C219659560071C9C5 /* MovieDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetail.swift; sourceTree = "<group>"; };
 		04A6986E21965A730071C9C5 /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
 		04A6987021965B220071C9C5 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		04A698762196626B0071C9C5 /* MoyaPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaPlugin.swift; sourceTree = "<group>"; };
+		04A69878219662910071C9C5 /* MoyaServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaServices.swift; sourceTree = "<group>"; };
+		04A6987A219663040071C9C5 /* MovieAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieAPI.swift; sourceTree = "<group>"; };
+		04A6987E219664280071C9C5 /* MovieDatasourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDatasourceProtocol.swift; sourceTree = "<group>"; };
+		04A698802196676F0071C9C5 /* MovieDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDataSource.swift; sourceTree = "<group>"; };
 		15736FFA17457C545F8D1B01 /* Pods-iOSArcTouchChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSArcTouchChallengeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSArcTouchChallengeTests/Pods-iOSArcTouchChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4406003EDEAC1E9EAA5541AB /* Pods-iOSArcTouchChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSArcTouchChallengeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSArcTouchChallengeTests/Pods-iOSArcTouchChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
 		6E0D7EF583EAFCC21C412D3C /* Pods-iOSArcTouchChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSArcTouchChallenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSArcTouchChallenge/Pods-iOSArcTouchChallenge.debug.xcconfig"; sourceTree = "<group>"; };
@@ -97,6 +107,7 @@
 		04A69845219658C80071C9C5 /* iOSArcTouchChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				04A69872219661DD0071C9C5 /* Data */,
 				04A698672196592A0071C9C5 /* Domain */,
 				04A69866219658DA0071C9C5 /* Supporting Files */,
 				04A69848219658C80071C9C5 /* ViewController.swift */,
@@ -150,6 +161,58 @@
 			children = (
 			);
 			path = "Use Cases";
+			sourceTree = "<group>";
+		};
+		04A69872219661DD0071C9C5 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				04A69873219662150071C9C5 /* Datasource */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		04A69873219662150071C9C5 /* Datasource */ = {
+			isa = PBXGroup;
+			children = (
+				04A6987D219664190071C9C5 /* Protocol */,
+				04A698742196621D0071C9C5 /* REST */,
+			);
+			path = Datasource;
+			sourceTree = "<group>";
+		};
+		04A698742196621D0071C9C5 /* REST */ = {
+			isa = PBXGroup;
+			children = (
+				04A698752196624D0071C9C5 /* Endpoint */,
+				04A698802196676F0071C9C5 /* MovieDataSource.swift */,
+			);
+			path = REST;
+			sourceTree = "<group>";
+		};
+		04A698752196624D0071C9C5 /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				04A6987C219663E90071C9C5 /* Moya */,
+				04A6987A219663040071C9C5 /* MovieAPI.swift */,
+			);
+			path = Endpoint;
+			sourceTree = "<group>";
+		};
+		04A6987C219663E90071C9C5 /* Moya */ = {
+			isa = PBXGroup;
+			children = (
+				04A698762196626B0071C9C5 /* MoyaPlugin.swift */,
+				04A69878219662910071C9C5 /* MoyaServices.swift */,
+			);
+			path = Moya;
+			sourceTree = "<group>";
+		};
+		04A6987D219664190071C9C5 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				04A6987E219664280071C9C5 /* MovieDatasourceProtocol.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 		6A8C20BF6563FFFA247BFA80 /* Frameworks */ = {
@@ -361,6 +424,11 @@
 				04A6986B2196594A0071C9C5 /* Movie.swift in Sources */,
 				04A6986D219659560071C9C5 /* MovieDetail.swift in Sources */,
 				04A6986F21965A730071C9C5 /* Genre.swift in Sources */,
+				04A698772196626B0071C9C5 /* MoyaPlugin.swift in Sources */,
+				04A6987F219664280071C9C5 /* MovieDatasourceProtocol.swift in Sources */,
+				04A6987B219663040071C9C5 /* MovieAPI.swift in Sources */,
+				04A698812196676F0071C9C5 /* MovieDataSource.swift in Sources */,
+				04A69879219662910071C9C5 /* MoyaServices.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
