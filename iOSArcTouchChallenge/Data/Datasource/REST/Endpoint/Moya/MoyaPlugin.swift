@@ -26,4 +26,13 @@ extension MovieTargetType {
     var headers: [String : String]? {
         return nil
     }
+    
+    var sampleData: Data {
+        return Data()
+    }
+    
+    var parameterEncoding: ParameterEncoding {
+        return URLEncoding.default
+    }
+ 
 }

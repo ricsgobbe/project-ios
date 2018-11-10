@@ -8,8 +8,9 @@
 
 import Foundation
 import SwiftyJSON
+import SwiftyUserDefaults
 
-struct Genre {
+struct Genre: Codable, DefaultsSerializable {
     
     let id: Int
     let name: String

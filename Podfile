@@ -12,10 +12,12 @@ target 'iOSArcTouchChallenge' do
   pod 'Moya'
   pod 'Reusable'
   pod 'Nuke'
+  pod 'SwiftyUserDefaults', '4.0.0-alpha.1'
 
-  target 'iOSArcTouchChallengeTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
+end
 
+target 'iOSArcTouchChallengeTests' do
+    use_frameworks!
+    pod 'Nimble'
+    pod 'Quick'
 end

@@ -8,21 +8,22 @@
 
 import Foundation
 import SwiftyJSON
+import SwiftyUserDefaults
 
-struct Configuration {
+struct Configuration: Codable, DefaultsSerializable {
     
     let changeKeys: [String]
     let image: Images
     
     init(json: JSON) {
-        changeKeys = json["change_key"].arrayValue.map({ $0.stringValue })
-        let imageObj = Images(json: json["image"])
+        changeKeys = json["change_keys"].arrayValue.map({ $0.stringValue })
+        let imageObj = Images(json: json["images"])
         image = imageObj
     }
     
 }
 
-struct Images {
+struct Images: Codable, DefaultsSerializable {
     
     let baseUrl: String
     let secureBaseUrl: String

@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FBF960C8036498C23A7CB67E7B8867C5"
+               BlueprintIdentifier = "FAB9A3D1089A8AE804609B671F00DCE4"
                BuildableName = "Pods_iOSArcTouchChallengeTests.framework"
                BlueprintName = "Pods-iOSArcTouchChallengeTests"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FBF960C8036498C23A7CB67E7B8867C5"
+            BlueprintIdentifier = "FAB9A3D1089A8AE804609B671F00DCE4"
             BuildableName = "Pods_iOSArcTouchChallengeTests.framework"
             BlueprintName = "Pods-iOSArcTouchChallengeTests"
             ReferencedContainer = "container:Pods.xcodeproj">

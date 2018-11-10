@@ -31,7 +31,7 @@ class MovieDataSource: MovieDatasourceProtocol {
         service.request(.getGenres()) { (result) in
             switch result {
             case .success(let genreJson):
-                let genreList = genreJson.arrayValue.map({ Genre(json: $0) })
+                let genreList = genreJson["genres"].arrayValue.map({ Genre(json: $0) })
                 completion(genreList, nil)
                 return
             case .failure(let error):

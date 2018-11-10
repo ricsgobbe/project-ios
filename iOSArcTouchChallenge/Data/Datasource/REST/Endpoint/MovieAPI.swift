@@ -54,22 +54,6 @@ extension MovieAPI: MovieTargetType {
         }
     }
     
-    var sampleData: Data {
-        return Data()
-    }
-    
-    var parameterEncoding: ParameterEncoding {
-        return URLEncoding.default
-    }
-    
-    var task: Task {
-        switch self {
-        default:
-            return .requestParameters(parameters: parameters!, encoding: parameterEncoding)
-        }
-    }
-    
-    
     var parameters: [String : Any]? {
         switch self {
         case .upcomingMovies(let page):
@@ -78,5 +62,12 @@ extension MovieAPI: MovieTargetType {
         }
     }
     
+    var task: Task {
+        switch self {
+        default:
+            return .requestParameters(parameters: parameters!, encoding: parameterEncoding)
+        }
+    }
+
     
 }
