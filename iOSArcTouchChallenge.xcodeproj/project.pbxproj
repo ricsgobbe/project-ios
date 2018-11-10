@@ -13,6 +13,10 @@
 		04A6984E219658CB0071C9C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04A6984D219658CB0071C9C5 /* Assets.xcassets */; };
 		04A69851219658CB0071C9C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04A6984F219658CB0071C9C5 /* LaunchScreen.storyboard */; };
 		04A6985C219658CB0071C9C5 /* iOSArcTouchChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A6985B219658CB0071C9C5 /* iOSArcTouchChallengeTests.swift */; };
+		04A6986B2196594A0071C9C5 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A6986A2196594A0071C9C5 /* Movie.swift */; };
+		04A6986D219659560071C9C5 /* MovieDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A6986C219659560071C9C5 /* MovieDetail.swift */; };
+		04A6986F21965A730071C9C5 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A6986E21965A730071C9C5 /* Genre.swift */; };
+		04A6987121965B220071C9C5 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A6987021965B220071C9C5 /* Configuration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +40,10 @@
 		04A69857219658CB0071C9C5 /* iOSArcTouchChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSArcTouchChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04A6985B219658CB0071C9C5 /* iOSArcTouchChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSArcTouchChallengeTests.swift; sourceTree = "<group>"; };
 		04A6985D219658CB0071C9C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04A6986A2196594A0071C9C5 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		04A6986C219659560071C9C5 /* MovieDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetail.swift; sourceTree = "<group>"; };
+		04A6986E21965A730071C9C5 /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
+		04A6987021965B220071C9C5 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +85,9 @@
 		04A69845219658C80071C9C5 /* iOSArcTouchChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				04A69846219658C80071C9C5 /* AppDelegate.swift */,
+				04A69866219658DA0071C9C5 /* Supporting Files */,
 				04A69848219658C80071C9C5 /* ViewController.swift */,
 				04A6984A219658C80071C9C5 /* Main.storyboard */,
-				04A6984D219658CB0071C9C5 /* Assets.xcassets */,
-				04A6984F219658CB0071C9C5 /* LaunchScreen.storyboard */,
-				04A69852219658CB0071C9C5 /* Info.plist */,
 			);
 			path = iOSArcTouchChallenge;
 			sourceTree = "<group>";
@@ -94,6 +99,45 @@
 				04A6985D219658CB0071C9C5 /* Info.plist */,
 			);
 			path = iOSArcTouchChallengeTests;
+			sourceTree = "<group>";
+		};
+		04A69866219658DA0071C9C5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				04A698672196592A0071C9C5 /* Domain */,
+				04A6984F219658CB0071C9C5 /* LaunchScreen.storyboard */,
+				04A69852219658CB0071C9C5 /* Info.plist */,
+				04A6984D219658CB0071C9C5 /* Assets.xcassets */,
+				04A69846219658C80071C9C5 /* AppDelegate.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		04A698672196592A0071C9C5 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				04A698692196593B0071C9C5 /* Use Cases */,
+				04A69868219659360071C9C5 /* Model */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		04A69868219659360071C9C5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				04A6986A2196594A0071C9C5 /* Movie.swift */,
+				04A6986C219659560071C9C5 /* MovieDetail.swift */,
+				04A6986E21965A730071C9C5 /* Genre.swift */,
+				04A6987021965B220071C9C5 /* Configuration.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		04A698692196593B0071C9C5 /* Use Cases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Use Cases";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,8 +241,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04A6987121965B220071C9C5 /* Configuration.swift in Sources */,
 				04A69849219658C80071C9C5 /* ViewController.swift in Sources */,
 				04A69847219658C80071C9C5 /* AppDelegate.swift in Sources */,
+				04A6986B2196594A0071C9C5 /* Movie.swift in Sources */,
+				04A6986D219659560071C9C5 /* MovieDetail.swift in Sources */,
+				04A6986F21965A730071C9C5 /* Genre.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,7 +409,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = iOSArcTouchChallenge/Info.plist;
+				INFOPLIST_FILE = "iOSArcTouchChallenge/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -378,7 +426,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = iOSArcTouchChallenge/Info.plist;
+				INFOPLIST_FILE = "iOSArcTouchChallenge/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
