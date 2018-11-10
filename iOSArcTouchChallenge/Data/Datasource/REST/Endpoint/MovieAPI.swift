@@ -22,12 +22,12 @@ enum Result<T> {
     case failure(Error)
 }
 
-extension MovieAPI: TargetType {
+extension MovieAPI: MovieTargetType {
     
     var baseURL: URL {
-        return URL(string: "https://192.168.15.15")!
+        return URL(string: "https://api.themoviedb.org/3/")!
     }
-    
+
     var path: String {
         switch self {
         case .upcomingMovies(_):
@@ -58,14 +58,23 @@ extension MovieAPI: TargetType {
         return Data()
     }
     
+    var parameterEncoding: ParameterEncoding {
+        return URLEncoding.default
+    }
+    
     var task: Task {
-        return .requestPlain
+        switch self {
+        default:
+            return .requestParameters(parameters: parameters!, encoding: parameterEncoding)
+        }
     }
     
     
-    var headers: [String : String]? {
+    var parameters: [String : Any]? {
         switch self {
-           default: return ["api_key": "1f54bd990f1cdfb230adb312546d765d"]
+        case .upcomingMovies(let page):
+            return ["api_key": "1f54bd990f1cdfb230adb312546d765d", "page": page]
+        default: return ["api_key": "1f54bd990f1cdfb230adb312546d765d"]
         }
     }
     
