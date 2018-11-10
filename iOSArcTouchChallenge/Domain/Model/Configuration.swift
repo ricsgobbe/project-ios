@@ -7,11 +7,18 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 struct Configuration {
     
     let changeKeys: [String]
     let image: Images
+    
+    init(json: JSON) {
+        changeKeys = json["change_key"].arrayValue.map({ $0.stringValue })
+        let imageObj = Images(json: json["image"])
+        image = imageObj
+    }
     
 }
 
@@ -24,4 +31,15 @@ struct Images {
     let posterSizes: [String]
     let profileSizes: [String]
     let stillSizes: [String]
+    
+    init(json: JSON) {
+        baseUrl = json["base_url"].stringValue
+        secureBaseUrl = json["secure_base_url"].stringValue
+        backdropSizes = json["backdrop_sizes"].arrayValue.map({ $0.stringValue })
+        logoSizes = json["logo_sizes"].arrayValue.map({ $0.stringValue })
+        posterSizes = json["poster_sizes"].arrayValue.map({ $0.stringValue })
+        profileSizes = json["profile_sizes"].arrayValue.map({ $0.stringValue })
+        stillSizes = json["still_sizes"].arrayValue.map({ $0.stringValue })
+    }
+    
 }

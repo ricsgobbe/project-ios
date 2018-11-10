@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 struct MovieDetail {
     
@@ -15,5 +16,13 @@ struct MovieDetail {
     let genre: [Genre]
     let overview: String
     let releaseDate: String
+    
+    init(json: JSON) {
+        name = json["name"].stringValue
+        posterImage = json["poster_image"].stringValue
+        genre = json["genre"].arrayValue.map({ Genre(json: $0) })
+        overview = json["overview"].stringValue
+        releaseDate = json["release_date"].stringValue
+    }
     
 }

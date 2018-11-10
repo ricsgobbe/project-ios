@@ -7,11 +7,17 @@
 //
 
 import Foundation
-
+import SwiftyJSON
 
 struct Genre {
     
     let id: Int
     let name: String
+    
+    init(json: JSON) {
+        id = json["id"].intValue
+        name = json["name"].stringValue
+    }
+    
     
 }
