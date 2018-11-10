@@ -85,6 +85,7 @@
 		04A69845219658C80071C9C5 /* iOSArcTouchChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				04A698672196592A0071C9C5 /* Domain */,
 				04A69866219658DA0071C9C5 /* Supporting Files */,
 				04A69848219658C80071C9C5 /* ViewController.swift */,
 				04A6984A219658C80071C9C5 /* Main.storyboard */,
@@ -104,7 +105,6 @@
 		04A69866219658DA0071C9C5 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				04A698672196592A0071C9C5 /* Domain */,
 				04A6984F219658CB0071C9C5 /* LaunchScreen.storyboard */,
 				04A69852219658CB0071C9C5 /* Info.plist */,
 				04A6984D219658CB0071C9C5 /* Assets.xcassets */,
