@@ -9,6 +9,25 @@
 import Foundation
 import SwiftyJSON
 
+
+
+struct MovieResponse {
+    let movies: [Movie]
+    let page: Int
+    let dates: [String]
+    let totalPages: Int
+    let totalResults: Int
+    
+    init(json: JSON) {
+        movies = json["results"].arrayValue.map({ Movie(json: $0) })
+        page = json["page"].intValue
+        dates = json["dates"].arrayValue.map({ $0.stringValue })
+        totalPages = json["total_pages"].intValue
+        totalResults = json["total_results"].intValue
+    }
+}
+
+
 struct Movie {
     
     let id: Int
@@ -25,6 +44,7 @@ struct Movie {
         genres = json["genres"].arrayValue.map({ $0.intValue })
         overview = json["overview"].stringValue
         releaseDate = json["release_date"].stringValue
+
     }
     
     

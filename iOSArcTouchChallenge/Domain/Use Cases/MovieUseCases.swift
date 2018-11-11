@@ -20,7 +20,7 @@ class MovieUseCases {
         cacheRepository.cacheDatasource = MovieCacheDatasource()
     }
     
-    func displayUpcomingMovies(page : Int, completion: @escaping ([Movie]?, Error?) -> Void) {
+    func displayUpcomingMovies(page : Int = 1, completion: @escaping (MovieResponse?, Error?) -> Void) {
         repository.downloadUpcomingMovies(page: page, completion: completion)
     }
     

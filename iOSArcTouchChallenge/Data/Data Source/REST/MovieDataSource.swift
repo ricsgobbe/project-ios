@@ -41,13 +41,13 @@ class MovieDataSource: MovieDatasourceProtocol {
         }
     }
     
-    func fetchUpcomingMovie(page: Int, completion: @escaping ([Movie]?, Error?) -> Void) {
+    func fetchUpcomingMovie(page: Int, completion: @escaping (MovieResponse?, Error?) -> Void) {
         let service = getApiService()
         service.request(.upcomingMovies(page: page)) { (result) in
             switch result {
             case .success(let moviesJson):
-                let movies = moviesJson.arrayValue.map({ Movie(json: $0) })
-                completion(movies, nil)
+                let result = MovieResponse(json: moviesJson)
+                completion(result, nil)
                 return
             case .failure(let error):
                 completion(nil, error)

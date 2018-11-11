@@ -19,7 +19,7 @@ class MovieRepository: MovieRepositoryProtocol {
         datasource.fetchGenreList(completion: completion)
     }
     
-    func downloadUpcomingMovies(page: Int, completion: @escaping ([Movie]?, Error?) -> Void) {
+    func downloadUpcomingMovies(page: Int, completion: @escaping (MovieResponse?, Error?) -> Void) {
         datasource.fetchUpcomingMovie(page: page, completion: completion)
     }
     
