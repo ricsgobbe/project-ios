@@ -12,7 +12,7 @@
         <!--Details-->
         <scene sceneID="kGw-sr-OgI">
             <objects>
-                <tableViewController storyboardIdentifier="MovieDetailTableView" id="FMa-Jy-G4n" customClass="MovieDetailTableView" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="MovieDetailTableView" id="FMa-Jy-G4n" customClass="MovieDetailTableView" customModule="iOSArcTouchChallenge" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="yUh-Ke-oGZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26,7 +26,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1wX-bN-ViB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1292" y="-213.64317841079463"/>
+            <point key="canvasLocation" x="2231.1999999999998" y="-213.64317841079463"/>
         </scene>
     </scenes>
 </document>

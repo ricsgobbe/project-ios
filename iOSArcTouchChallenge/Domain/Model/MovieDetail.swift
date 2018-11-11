@@ -18,9 +18,9 @@ struct MovieDetail {
     let releaseDate: String
     
     init(json: JSON) {
-        name = json["name"].stringValue
-        posterImage = json["poster_image"].stringValue
-        genre = json["genre"].arrayValue.map({ Genre(json: $0) })
+        name = json["title"].stringValue
+        posterImage = json["poster_path"].stringValue
+        genre = json["genres"].arrayValue.map({ Genre(json: $0) })
         overview = json["overview"].stringValue
         releaseDate = json["release_date"].stringValue
     }

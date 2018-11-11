@@ -10,6 +10,7 @@ import UIKit
 import Reusable
 
 protocol UpcomingMoviesViewProtocol: class, LoadingView {
+    var coordinator: Coordinator! {get set}
     var presenter: UpcomingMovieProtocol! {get set}
     
     func showMovieList(movies: [Movie])
@@ -17,8 +18,11 @@ protocol UpcomingMoviesViewProtocol: class, LoadingView {
 }
 
 
-class UpcomingMoviesView: UIViewController, StoryboardBased {
+class UpcomingMoviesView: UIViewController, StoryboardSceneBased {
+    static var sceneStoryboard: UIStoryboard = UIStoryboard(name: "UpcomingMoviesView", bundle: nil)
     
+    
+    var coordinator: Coordinator!
     var presenter: UpcomingMovieProtocol!
     var tapGesture: UITapGestureRecognizer!
     var refreshControl: UIRefreshControl!
@@ -103,7 +107,11 @@ extension UpcomingMoviesView: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-      
+       let selectedMovie = presenter.getMovieAt(position: indexPath.row)
+        guard let id = selectedMovie?.id else {
+            return
+        }
+       coordinator.showMovieDetails(id: id)
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {

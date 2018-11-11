@@ -65,7 +65,7 @@
                 <outlet property="movieTitle" destination="VAc-q5-KUw" id="0QI-PB-J59"/>
                 <outlet property="overview" destination="tAh-tx-9fu" id="JMn-FD-HMc"/>
                 <outlet property="releaseDate" destination="HwP-zk-zvH" id="7Jl-4r-bNv"/>
-                <outlet property="titleGenre" destination="2NY-fQ-Znm" id="uyp-cQ-k9K"/>
+                <outlet property="titleGenre" destination="2NY-fQ-Znm" id="tB8-jU-myJ"/>
             </connections>
             <point key="canvasLocation" x="34" y="157"/>
         </tableViewCell>
