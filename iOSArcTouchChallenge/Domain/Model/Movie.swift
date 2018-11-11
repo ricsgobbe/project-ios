@@ -39,9 +39,9 @@ struct Movie {
     
     init(json: JSON) {
         id = json["id"].intValue
-        name = json["name"].stringValue
-        backdropImage = json["backdrop_image"].stringValue
-        genres = json["genres"].arrayValue.map({ $0.intValue })
+        name = json["title"].stringValue
+        backdropImage = json["backdrop_path"].stringValue
+        genres = json["genre_ids"].arrayValue.map({ $0.intValue })
         overview = json["overview"].stringValue
         releaseDate = json["release_date"].stringValue
 

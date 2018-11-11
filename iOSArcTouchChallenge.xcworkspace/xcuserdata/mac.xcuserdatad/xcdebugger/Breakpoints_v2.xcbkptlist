@@ -138,12 +138,140 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iOSArcTouchChallenge/Data/Data Source/REST/MovieDataSource.swift"
-            timestampString = "563597356.8774641"
+            timestampString = "563634668.33092"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "50"
             endingLineNumber = "50"
             landmarkName = "fetchUpcomingMovie(page:completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iOSArcTouchChallenge/Presentation/Movie/Presenter/UpcomingMoviesPresenter.swift"
+            timestampString = "563634668.3310241"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
+            landmarkName = "loadMoreMovies()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iOSArcTouchChallenge.UpcomingMoviesPresenter.loadMoreMovies() -&gt; ()"
+                  moduleName = "iOSArcTouchChallenge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac/Development/iOSArcTouchChallenge/iOSArcTouchChallenge/Presentation/Movie/Presenter/UpcomingMoviesPresenter.swift"
+                  timestampString = "563633019.582185"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "107">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;iOSArcTouchChallenge.MovieResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in iOSArcTouchChallenge.UpcomingMoviesPresenter.loadMoreMovies() -&gt; ()"
+                  moduleName = "iOSArcTouchChallenge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac/Development/iOSArcTouchChallenge/iOSArcTouchChallenge/Presentation/Movie/Presenter/UpcomingMoviesPresenter.swift"
+                  timestampString = "563633019.584803"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "59">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iOSArcTouchChallenge/Presentation/Movie/Presenter/UpcomingMoviesPresenter.swift"
+            timestampString = "563634668.331116"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "fetchMovies()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iOSArcTouchChallenge.UpcomingMoviesPresenter.fetchMovies() -&gt; ()"
+                  moduleName = "iOSArcTouchChallenge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac/Development/iOSArcTouchChallenge/iOSArcTouchChallenge/Presentation/Movie/Presenter/UpcomingMoviesPresenter.swift"
+                  timestampString = "563633073.19697"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "25">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;iOSArcTouchChallenge.MovieResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in iOSArcTouchChallenge.UpcomingMoviesPresenter.fetchMovies() -&gt; ()"
+                  moduleName = "iOSArcTouchChallenge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mac/Development/iOSArcTouchChallenge/iOSArcTouchChallenge/Presentation/Movie/Presenter/UpcomingMoviesPresenter.swift"
+                  timestampString = "563633073.2002831"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "56">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iOSArcTouchChallenge/Presentation/Movie/Presenter/UpcomingMoviesPresenter.swift"
+            timestampString = "563634668.331201"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "fetchMovies()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iOSArcTouchChallenge/Presentation/Movie/Presenter/UpcomingMoviesPresenter.swift"
+            timestampString = "563634668.331284"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "fetchMovies()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
