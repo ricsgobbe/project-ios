@@ -11,6 +11,7 @@ import Foundation
 protocol UpcomingMovieProtocol {
     var view: UpcomingMoviesView! {get set}
     var useCase: MovieUseCases! {get set}
+    var upcomingMovie: [Movie]! {get set}
     
     func downloadGenresList()
     func downloadConfigObj()
@@ -27,10 +28,12 @@ class UpcomingMoviesPresenter: UpcomingMovieProtocol {
     
     var useCase: MovieUseCases!
     var view: UpcomingMoviesView!
+    var upcomingMovie: [Movie]!
     var movieResult: MovieResponse?
     
     init(view: UpcomingMoviesView) {
         useCase = MovieUseCases()
+        upcomingMovie = [Movie]()
         self.view = view
     }
     
@@ -45,6 +48,8 @@ class UpcomingMoviesPresenter: UpcomingMovieProtocol {
     func fetchMovies() {
         useCase.displayUpcomingMovies { [weak self](result, error) in
             self?.movieResult = result
+            self?.upcomingMovie.removeAll()
+            self?.populateUpcomingMovie(response: result)
             self?.view.showMovieList(movies: [])
         }
     }
@@ -53,8 +58,9 @@ class UpcomingMoviesPresenter: UpcomingMovieProtocol {
         guard let result = movieResult else {
             return
         }
-        useCase.displayUpcomingMovies(page: result.page) { [weak self](result, error) in
+        useCase.displayUpcomingMovies(page: result.page + 1) { [weak self](result, error) in
             self?.movieResult = result
+            self?.populateUpcomingMovie(response: result)
             self?.view.showMovieList(movies: [])
         }
     }
@@ -66,15 +72,11 @@ class UpcomingMoviesPresenter: UpcomingMovieProtocol {
     }
     
     func getMovieAt(position: Int) -> Movie? {
-        guard let movie = movieResult?.movies[position] else {
-            return nil
-        }
+        let movie: Movie = upcomingMovie[position]
         return movie
     }
     func movieListSize() -> Int {
-        guard let movies = movieResult?.movies else {
-            return 0
-        }
+        let movies: [Movie] = upcomingMovie
         return movies.count
     }
     
@@ -90,6 +92,13 @@ class UpcomingMoviesPresenter: UpcomingMovieProtocol {
             return ids.contains(genre.id)
         }        
         return result
+    }
+    
+    fileprivate func populateUpcomingMovie(response: MovieResponse?) {
+        guard let movies = response?.movies else {
+            return
+        }
+        upcomingMovie.append(contentsOf: movies)
     }
     
 }

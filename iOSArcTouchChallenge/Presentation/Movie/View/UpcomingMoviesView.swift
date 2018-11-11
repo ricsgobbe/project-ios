@@ -22,6 +22,7 @@ class UpcomingMoviesView: UIViewController, StoryboardBased {
     var presenter: UpcomingMovieProtocol!
     var tapGesture: UITapGestureRecognizer!
     var refreshControl: UIRefreshControl!
+    
 
     @IBOutlet weak var loadingView: UIView!
     @IBOutlet weak var movieDetailTableView: UITableView!
@@ -31,8 +32,11 @@ class UpcomingMoviesView: UIViewController, StoryboardBased {
     }
     
     fileprivate func initialSetup() {
-        tableViewSetup()
         presenter = UpcomingMoviesPresenter(view: self)
+        startLoading()
+        tableViewSetup()
+        pullToRefreshSetup()
+        setupBottomIndicatorView()
         presenter.fetchMovies()
         tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.handleTap(sender:)))
         loadingView.addGestureRecognizer(tapGesture)
@@ -47,7 +51,34 @@ class UpcomingMoviesView: UIViewController, StoryboardBased {
         movieDetailTableView.rowHeight = UITableView.automaticDimension
     }
     
+    fileprivate func pullToRefreshSetup() {
+        refreshControl = UIRefreshControl()
+        refreshControl.tintColor = ColorPalette.mainColor
+        refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
+        movieDetailTableView.addSubview(refreshControl)
+    }
     
+    fileprivate func endSwipePull(){
+        if refreshControl != nil {
+            self.refreshControl.endRefreshing()
+        }
+    }
+    
+    fileprivate func stopBottomIndicator() {
+        self.movieDetailTableView.tableFooterView?.isHidden = true
+    }
+    
+    fileprivate func startBottomIndicator() {
+        self.movieDetailTableView.tableFooterView?.isHidden = false
+    }
+    
+    fileprivate func setupBottomIndicatorView() {
+        let spinner = UIActivityIndicatorView(style: .gray)
+        spinner.startAnimating()
+        spinner.frame = CGRect(x: CGFloat(0), y: CGFloat(0), width: movieDetailTableView.bounds.width, height: CGFloat(44))
+        
+        self.movieDetailTableView.tableFooterView = spinner
+    }
 }
 
 extension UpcomingMoviesView: UITableViewDelegate, UITableViewDataSource {
@@ -75,6 +106,23 @@ extension UpcomingMoviesView: UITableViewDelegate, UITableViewDataSource {
       
     }
     
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let lastSectionIndex = tableView.numberOfSections - 1
+        let lastRowIndex = tableView.numberOfRows(inSection: lastSectionIndex) - 1
+        if indexPath.section ==  lastSectionIndex && indexPath.row == lastRowIndex {
+            startBottomIndicator()
+        }
+    }
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        let currentOffset = scrollView.contentOffset.y
+        let maximumOffset = scrollView.contentSize.height - scrollView.frame.size.height
+        
+        if maximumOffset - currentOffset <= 10.0 {
+            presenter.loadMoreMovies()
+        }
+    }
+    
 }
 
 
@@ -85,16 +133,23 @@ extension UpcomingMoviesView: UpcomingMoviesViewProtocol {
     }
     
     @objc func handleTap(sender: UITapGestureRecognizer?) {
-        
+        presenter.fetchMovies()
     }
     
+    @objc func refresh(_ sender: Any) {
+        presenter.fetchMovies()
+    }
     
     func showMovieList(movies: [Movie]) {
         self.movieDetailTableView.reloadData()
+        stopLoading()
+        endSwipePull()
+        stopBottomIndicator()
     }
     
     func showMsg(message: AlertTypes) {
-        
+        AlertManager.createOneButtonAlert(controller: self, type: message)
+        endSwipePull()
     }
     
     
