@@ -24,6 +24,12 @@
 		04A6987F219664280071C9C5 /* MovieDatasourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A6987E219664280071C9C5 /* MovieDatasourceProtocol.swift */; };
 		04A698812196676F0071C9C5 /* MovieDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A698802196676F0071C9C5 /* MovieDataSource.swift */; };
 		04A6988421974E8F0071C9C5 /* MovieCacheDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A6988321974E8F0071C9C5 /* MovieCacheDatasource.swift */; };
+		04FE7F11219782BA000010D1 /* MovieCacheDatasourceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE7F10219782BA000010D1 /* MovieCacheDatasourceProtocol.swift */; };
+		04FE7F15219783AC000010D1 /* MovieRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE7F14219783AC000010D1 /* MovieRepositoryProtocol.swift */; };
+		04FE7F17219784F7000010D1 /* MovieCacheRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE7F16219784F7000010D1 /* MovieCacheRepositoryProtocol.swift */; };
+		04FE7F1921978782000010D1 /* MovieRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE7F1821978782000010D1 /* MovieRepository.swift */; };
+		04FE7F1B2197880C000010D1 /* MovieCacheRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE7F1A2197880C000010D1 /* MovieCacheRepository.swift */; };
+		04FE7F1D2197C0E2000010D1 /* MovieUseCases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE7F1C2197C0E2000010D1 /* MovieUseCases.swift */; };
 		930DB605D5DDFACBDC9C6A83 /* Pods_iOSArcTouchChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9A8FAE4297F5FE2D2B30EF8 /* Pods_iOSArcTouchChallengeTests.framework */; };
 		C860E108B470BA6FBFEE4B33 /* Pods_iOSArcTouchChallenge_iOSArcTouchChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C06E03AA822F3A69CB737B4 /* Pods_iOSArcTouchChallenge_iOSArcTouchChallengeTests.framework */; };
 /* End PBXBuildFile section */
@@ -59,6 +65,12 @@
 		04A6987E219664280071C9C5 /* MovieDatasourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDatasourceProtocol.swift; sourceTree = "<group>"; };
 		04A698802196676F0071C9C5 /* MovieDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDataSource.swift; sourceTree = "<group>"; };
 		04A6988321974E8F0071C9C5 /* MovieCacheDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCacheDatasource.swift; sourceTree = "<group>"; };
+		04FE7F10219782BA000010D1 /* MovieCacheDatasourceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCacheDatasourceProtocol.swift; sourceTree = "<group>"; };
+		04FE7F14219783AC000010D1 /* MovieRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRepositoryProtocol.swift; sourceTree = "<group>"; };
+		04FE7F16219784F7000010D1 /* MovieCacheRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCacheRepositoryProtocol.swift; sourceTree = "<group>"; };
+		04FE7F1821978782000010D1 /* MovieRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRepository.swift; sourceTree = "<group>"; };
+		04FE7F1A2197880C000010D1 /* MovieCacheRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCacheRepository.swift; sourceTree = "<group>"; };
+		04FE7F1C2197C0E2000010D1 /* MovieUseCases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieUseCases.swift; sourceTree = "<group>"; };
 		15736FFA17457C545F8D1B01 /* Pods-iOSArcTouchChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSArcTouchChallengeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSArcTouchChallengeTests/Pods-iOSArcTouchChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		375D29A425BA63FBEEE035F9 /* Pods-iOSArcTouchChallenge-iOSArcTouchChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSArcTouchChallenge-iOSArcTouchChallengeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSArcTouchChallenge-iOSArcTouchChallengeTests/Pods-iOSArcTouchChallenge-iOSArcTouchChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
 		4406003EDEAC1E9EAA5541AB /* Pods-iOSArcTouchChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSArcTouchChallengeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSArcTouchChallengeTests/Pods-iOSArcTouchChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -166,6 +178,7 @@
 		04A698692196593B0071C9C5 /* Use Cases */ = {
 			isa = PBXGroup;
 			children = (
+				04FE7F1C2197C0E2000010D1 /* MovieUseCases.swift */,
 			);
 			path = "Use Cases";
 			sourceTree = "<group>";
@@ -173,19 +186,20 @@
 		04A69872219661DD0071C9C5 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				04A69873219662150071C9C5 /* Datasource */,
+				04FE7F1221978371000010D1 /* Repository */,
+				04A69873219662150071C9C5 /* Data Source */,
 			);
 			path = Data;
 			sourceTree = "<group>";
 		};
-		04A69873219662150071C9C5 /* Datasource */ = {
+		04A69873219662150071C9C5 /* Data Source */ = {
 			isa = PBXGroup;
 			children = (
 				04A6988221974E6A0071C9C5 /* Cache */,
 				04A6987D219664190071C9C5 /* Protocol */,
 				04A698742196621D0071C9C5 /* REST */,
 			);
-			path = Datasource;
+			path = "Data Source";
 			sourceTree = "<group>";
 		};
 		04A698742196621D0071C9C5 /* REST */ = {
@@ -219,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				04A6987E219664280071C9C5 /* MovieDatasourceProtocol.swift */,
+				04FE7F10219782BA000010D1 /* MovieCacheDatasourceProtocol.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -229,6 +244,25 @@
 				04A6988321974E8F0071C9C5 /* MovieCacheDatasource.swift */,
 			);
 			path = Cache;
+			sourceTree = "<group>";
+		};
+		04FE7F1221978371000010D1 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				04FE7F132197837F000010D1 /* Protocol */,
+				04FE7F1821978782000010D1 /* MovieRepository.swift */,
+				04FE7F1A2197880C000010D1 /* MovieCacheRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		04FE7F132197837F000010D1 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				04FE7F14219783AC000010D1 /* MovieRepositoryProtocol.swift */,
+				04FE7F16219784F7000010D1 /* MovieCacheRepositoryProtocol.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 		6A8C20BF6563FFFA247BFA80 /* Frameworks */ = {
@@ -464,6 +498,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04FE7F1921978782000010D1 /* MovieRepository.swift in Sources */,
 				04A6988421974E8F0071C9C5 /* MovieCacheDatasource.swift in Sources */,
 				04A6987121965B220071C9C5 /* Configuration.swift in Sources */,
 				04A69849219658C80071C9C5 /* ViewController.swift in Sources */,
@@ -471,9 +506,14 @@
 				04A6986B2196594A0071C9C5 /* Movie.swift in Sources */,
 				04A6986D219659560071C9C5 /* MovieDetail.swift in Sources */,
 				04A6986F21965A730071C9C5 /* Genre.swift in Sources */,
+				04FE7F1B2197880C000010D1 /* MovieCacheRepository.swift in Sources */,
 				04A698772196626B0071C9C5 /* MoyaPlugin.swift in Sources */,
 				04A6987F219664280071C9C5 /* MovieDatasourceProtocol.swift in Sources */,
+				04FE7F11219782BA000010D1 /* MovieCacheDatasourceProtocol.swift in Sources */,
+				04FE7F15219783AC000010D1 /* MovieRepositoryProtocol.swift in Sources */,
 				04A6987B219663040071C9C5 /* MovieAPI.swift in Sources */,
+				04FE7F1D2197C0E2000010D1 /* MovieUseCases.swift in Sources */,
+				04FE7F17219784F7000010D1 /* MovieCacheRepositoryProtocol.swift in Sources */,
 				04A698812196676F0071C9C5 /* MovieDataSource.swift in Sources */,
 				04A69879219662910071C9C5 /* MoyaServices.swift in Sources */,
 			);

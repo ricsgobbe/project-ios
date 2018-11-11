@@ -9,7 +9,7 @@
 import Foundation
 import SwiftyUserDefaults
 
-class MovieCacheDatasource {
+class MovieCacheDatasource: MovieCacheDatasourceProtocol {
     let configurationKey = DefaultsKey<Configuration?>("configuration_key")
     let genreKey = DefaultsKey<[Genre]?>("genre_list_key")
     
