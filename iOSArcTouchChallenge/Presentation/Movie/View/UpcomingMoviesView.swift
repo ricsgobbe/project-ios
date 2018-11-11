@@ -68,6 +68,7 @@ class UpcomingMoviesView: UIViewController, StoryboardSceneBased {
     fileprivate func searchbarInit() {
         searchBarSetup()
         navigationItem.searchController?.searchResultsUpdater = self
+        navigationItem.searchController?.searchBar.delegate = self
         
     }
     
@@ -172,13 +173,21 @@ extension UpcomingMoviesView: UpcomingMoviesViewProtocol {
     
 }
 
-extension UpcomingMoviesView: UISearchResultsUpdating {
+extension UpcomingMoviesView: UISearchResultsUpdating, UISearchBarDelegate {
     func updateSearchResults(for searchController: UISearchController) {
         guard let searchedMovie = searchController.searchBar.text else {
             return
         }
-        startLoading()
+        if searchedMovie.isEmpty {
+            return
+        }
+        
         presenter.search(movie: searchedMovie)
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        startLoading()
+        presenter.fetchMovies()
     }
     
 }
