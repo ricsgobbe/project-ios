@@ -10,7 +10,7 @@ import UIKit
 
 protocol Coordinator {
     var childCoordinators: [Coordinator] { get set }
-    var navigationController: UINavigationController { get set }
+    var navigationController: CustomNavigationBar { get set }
     
     func start()
     func showMovieDetails(id: Int)
@@ -19,9 +19,9 @@ protocol Coordinator {
 class MainCoordinator: Coordinator {
     
     var childCoordinators = [Coordinator]()
-    var navigationController: UINavigationController
+    var navigationController: CustomNavigationBar
     
-    init(navigationController: UINavigationController) {
+    init(navigationController: CustomNavigationBar) {
         self.navigationController = navigationController
     }
     

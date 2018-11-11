@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		01D8E1F33C315F7A4030A834 /* Pods_iOSArcTouchChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5097363F3CC2B0E798E0739 /* Pods_iOSArcTouchChallenge.framework */; };
 		04A69847219658C80071C9C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A69846219658C80071C9C5 /* AppDelegate.swift */; };
-		04A69849219658C80071C9C5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A69848219658C80071C9C5 /* ViewController.swift */; };
-		04A6984C219658C80071C9C5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04A6984A219658C80071C9C5 /* Main.storyboard */; };
 		04A6984E219658CB0071C9C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04A6984D219658CB0071C9C5 /* Assets.xcassets */; };
 		04A69851219658CB0071C9C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04A6984F219658CB0071C9C5 /* LaunchScreen.storyboard */; };
 		04A6985C219658CB0071C9C5 /* iOSArcTouchChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A6985B219658CB0071C9C5 /* iOSArcTouchChallengeTests.swift */; };
@@ -68,8 +66,6 @@
 /* Begin PBXFileReference section */
 		04A69843219658C80071C9C5 /* iOSArcTouchChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSArcTouchChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04A69846219658C80071C9C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		04A69848219658C80071C9C5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		04A6984B219658C80071C9C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		04A6984D219658CB0071C9C5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04A69850219658CB0071C9C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04A69852219658CB0071C9C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -174,8 +170,6 @@
 				04A69872219661DD0071C9C5 /* Data */,
 				04A698672196592A0071C9C5 /* Domain */,
 				04A69866219658DA0071C9C5 /* Supporting Files */,
-				04A69848219658C80071C9C5 /* ViewController.swift */,
-				04A6984A219658C80071C9C5 /* Main.storyboard */,
 			);
 			path = iOSArcTouchChallenge;
 			sourceTree = "<group>";
@@ -506,7 +500,6 @@
 				04FE7F3E2197D424000010D1 /* MovieListTableViewCell.xib in Resources */,
 				04A6984E219658CB0071C9C5 /* Assets.xcassets in Resources */,
 				04FE7F382197D390000010D1 /* UpcomingMoviesView.storyboard in Resources */,
-				04A6984C219658C80071C9C5 /* Main.storyboard in Resources */,
 				04FE7F402197D49E000010D1 /* PosterImageTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -634,7 +627,6 @@
 				04A6988421974E8F0071C9C5 /* MovieCacheDatasource.swift in Sources */,
 				04A6987121965B220071C9C5 /* Configuration.swift in Sources */,
 				04FE7F222197C48E000010D1 /* UpcomingMoviesPresenter.swift in Sources */,
-				04A69849219658C80071C9C5 /* ViewController.swift in Sources */,
 				04FE7F272197D1CF000010D1 /* LoadingView.swift in Sources */,
 				04FE7F4A2198A9FE000010D1 /* MovieInfoTableViewCell.swift in Sources */,
 				04A69847219658C80071C9C5 /* AppDelegate.swift in Sources */,
@@ -686,14 +678,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		04A6984A219658C80071C9C5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				04A6984B219658C80071C9C5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		04A6984F219658CB0071C9C5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

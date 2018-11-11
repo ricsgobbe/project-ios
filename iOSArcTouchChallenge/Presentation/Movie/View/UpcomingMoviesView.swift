@@ -37,6 +37,8 @@ class UpcomingMoviesView: UIViewController, StoryboardSceneBased {
     
     fileprivate func initialSetup() {
         presenter = UpcomingMoviesPresenter(view: self)
+        presenter.downloadConfigObj()
+        presenter.downloadGenresList()
         startLoading()
         tableViewSetup()
         pullToRefreshSetup()
@@ -158,6 +160,14 @@ extension UpcomingMoviesView: UpcomingMoviesViewProtocol {
     func showMsg(message: AlertTypes) {
         AlertManager.createOneButtonAlert(controller: self, type: message)
         endSwipePull()
+    }
+    
+    
+}
+
+extension UpcomingMoviesView: CustomNavigationControllerStylable {
+    var customNavigationControllerStyle: CustomNavigationControllerStyle? {
+        return CustomNavigationController()
     }
     
     
