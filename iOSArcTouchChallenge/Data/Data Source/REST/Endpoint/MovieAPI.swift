@@ -15,6 +15,7 @@ enum MovieAPI {
     case movieApiConfiguration()
     case getGenres()
     case getMovieDetail(movieId: Int)
+    case search(movie: String)
 }
 
 enum Result<T> {
@@ -38,6 +39,8 @@ extension MovieAPI: MovieTargetType {
             return "genre/movie/list"
         case .getMovieDetail(let movieId):
             return "movie/\(movieId)"
+        case .search(_):
+            return "search/movie"
         }
     }
     
@@ -51,6 +54,8 @@ extension MovieAPI: MovieTargetType {
             return .get
         case .getMovieDetail(_):
             return .get
+        case .search(_):
+            return .get
         }
     }
     
@@ -58,6 +63,8 @@ extension MovieAPI: MovieTargetType {
         switch self {
         case .upcomingMovies(let page):
             return ["api_key": "1f54bd990f1cdfb230adb312546d765d", "page": page]
+        case .search(let movie):
+            return ["api_key": "1f54bd990f1cdfb230adb312546d765d", "query": movie]
         default: return ["api_key": "1f54bd990f1cdfb230adb312546d765d"]
         }
     }

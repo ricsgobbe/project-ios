@@ -96,8 +96,6 @@ extension MovieDetailTableView: MovieDetailTableViewProtocol {
         self.movieDetails = detail
         self.tableView.reloadData()
     }
-    
-    
 }
 
 extension MovieDetailTableView {

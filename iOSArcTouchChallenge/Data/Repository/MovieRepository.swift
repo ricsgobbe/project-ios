@@ -27,4 +27,8 @@ class MovieRepository: MovieRepositoryProtocol {
         datasource.getMovieDetailsWith(id: id, completion: completion)
     }
     
+    func searchMovieWith(name: String, completion: @escaping (MovieResponse?, Error?) -> Void) {
+        datasource.search(movie: name, completion: completion)
+    }
+    
 }

@@ -22,6 +22,7 @@ protocol UpcomingMovieProtocol {
     func getMovieGenre(ids: [Int]) -> [Genre]
     func getMovieAt(position: Int) -> Movie?
     func movieListSize() -> Int
+    func search(movie: String)
 }
 
 class UpcomingMoviesPresenter: UpcomingMovieProtocol {
@@ -43,6 +44,15 @@ class UpcomingMoviesPresenter: UpcomingMovieProtocol {
     
     func downloadConfigObj() {
         useCase.downloadConfiguratorObj()
+    }
+    
+    func search(movie: String) {
+        useCase.searchMovie(name: movie) { [weak self] (result, error) in
+            self?.movieResult = result
+            self?.upcomingMovie.removeAll()
+            self?.populateUpcomingMovie(response: result)
+            self?.view.showMovieList(movies: [])
+        }
     }
     
     func fetchMovies() {

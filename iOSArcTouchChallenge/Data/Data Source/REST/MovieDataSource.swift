@@ -72,6 +72,19 @@ class MovieDataSource: MovieDatasourceProtocol {
         }
     }
     
+    func search(movie: String, completion: @escaping (MovieResponse?, Error?) -> Void) {
+        let service = getApiService()
+        service.request(.search(movie: movie)) { (result) in
+            switch result {
+            case .success(let movieJson):
+                let movieResponse = MovieResponse(json: movieJson)
+                completion(movieResponse, nil)
+            case .failure(let error):
+                completion(nil, error )
+            }
+        }
+    }
+    
     fileprivate func getApiService() -> Service<MovieAPI> {
         return Service<MovieAPI>(plugins: [MoviePlugins()])
     }

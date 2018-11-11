@@ -54,4 +54,8 @@ class MovieUseCases {
         return cacheRepository.retrieveConfigObj()
     }
     
+    func searchMovie(name: String, completion: @escaping (MovieResponse?, Error?) -> Void) {
+        repository.searchMovieWith(name: name, completion: completion)
+    }
+    
 }

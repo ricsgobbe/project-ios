@@ -14,4 +14,5 @@ protocol MovieDatasourceProtocol {
     func fetchGenreList(completion: @escaping ([Genre]?, Error?) -> Void)
     func fetchUpcomingMovie(page: Int, completion: @escaping (MovieResponse?, Error?) -> Void)
     func getMovieDetailsWith(id: Int, completion: @escaping (MovieDetail?, Error?) -> Void)
+    func search(movie: String, completion: @escaping (MovieResponse?, Error?) -> Void)
 }

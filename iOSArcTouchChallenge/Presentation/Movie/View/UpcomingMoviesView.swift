@@ -41,6 +41,7 @@ class UpcomingMoviesView: UIViewController, StoryboardSceneBased {
         presenter.downloadGenresList()
         startLoading()
         tableViewSetup()
+        searchbarInit()
         pullToRefreshSetup()
         setupBottomIndicatorView()
         presenter.fetchMovies()
@@ -62,6 +63,12 @@ class UpcomingMoviesView: UIViewController, StoryboardSceneBased {
         refreshControl.tintColor = ColorPalette.mainColor
         refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
         movieDetailTableView.addSubview(refreshControl)
+    }
+    
+    fileprivate func searchbarInit() {
+        searchBarSetup()
+        navigationItem.searchController?.searchResultsUpdater = self
+        
     }
     
     fileprivate func endSwipePull(){
@@ -165,10 +172,19 @@ extension UpcomingMoviesView: UpcomingMoviesViewProtocol {
     
 }
 
+extension UpcomingMoviesView: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let searchedMovie = searchController.searchBar.text else {
+            return
+        }
+        startLoading()
+        presenter.search(movie: searchedMovie)
+    }
+    
+}
+
 extension UpcomingMoviesView: CustomNavigationControllerStylable {
     var customNavigationControllerStyle: CustomNavigationControllerStyle? {
         return CustomNavigationController()
     }
-    
-    
 }

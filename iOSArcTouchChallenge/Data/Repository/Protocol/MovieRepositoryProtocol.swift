@@ -16,4 +16,5 @@ protocol MovieRepositoryProtocol {
     func downloadGenreList(completion: @escaping ([Genre]?, Error?) -> Void)
     func downloadUpcomingMovies(page: Int, completion: @escaping (MovieResponse?, Error?) -> Void)
     func downloadMovieDetailsWith(id: Int, completion: @escaping (MovieDetail?, Error?) -> Void)
+    func searchMovieWith(name: String, completion: @escaping (MovieResponse?, Error?) -> Void)
 }
