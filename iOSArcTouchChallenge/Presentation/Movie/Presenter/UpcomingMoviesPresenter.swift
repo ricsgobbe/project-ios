@@ -17,7 +17,6 @@ protocol UpcomingMovieProtocol {
     func downloadConfigObj()
     func fetchMovies()
     func loadMoreMovies()
-    func showMovieDetail(id: Int)
     func getConfig() -> Configuration?
     func getMovieGenre(ids: [Int]) -> [Genre]
     func getMovieAt(position: Int) -> Movie?
@@ -48,19 +47,15 @@ class UpcomingMoviesPresenter: UpcomingMovieProtocol {
     
     func search(movie: String) {
         useCase.searchMovie(name: movie) { [weak self] (result, error) in
-            self?.movieResult = result
             self?.upcomingMovie.removeAll()
-            self?.populateUpcomingMovie(response: result)
-            self?.view.showMovieList(movies: [])
+            self?.showMovies(result: result)
         }
     }
     
     func fetchMovies() {
         useCase.displayUpcomingMovies { [weak self](result, error) in
-            self?.movieResult = result
             self?.upcomingMovie.removeAll()
-            self?.populateUpcomingMovie(response: result)
-            self?.view.showMovieList(movies: [])
+            self?.showMovies(result: result)
         }
     }
     
@@ -68,18 +63,12 @@ class UpcomingMoviesPresenter: UpcomingMovieProtocol {
         guard let result = movieResult else {
             return
         }
-        useCase.displayUpcomingMovies(page: result.page + 1) { [weak self](result, error) in
-            self?.movieResult = result
-            self?.populateUpcomingMovie(response: result)
-            self?.view.showMovieList(movies: [])
+        let nextPage = result.page + 1
+        useCase.displayUpcomingMovies(page: nextPage) { [weak self](result, error) in
+            self?.showMovies(result: result)
         }
     }
     
-    func showMovieDetail(id: Int) {
-        useCase.displayMovieDetail(id: id) { (movieDetail, error) in
-            
-        }
-    }
     
     func getMovieAt(position: Int) -> Movie? {
         let movie: Movie = upcomingMovie[position]
@@ -102,6 +91,22 @@ class UpcomingMoviesPresenter: UpcomingMovieProtocol {
             return ids.contains(genre.id)
         }        
         return result
+    }
+    
+    fileprivate func showMovies(result: MovieResponse?) {
+        movieResult = result
+        populateUpcomingMovie(response: result)
+        if upcomingMovie.isEmpty {
+            view.showMsg(message: .warning)
+        } else {
+            view.showMovieList()
+        }
+    }
+    
+    fileprivate func isConnectedToInternet() {
+        if !NetworkManager.isConnectedToInternet(controller: view) {
+            return
+        }
     }
     
     fileprivate func populateUpcomingMovie(response: MovieResponse?) {

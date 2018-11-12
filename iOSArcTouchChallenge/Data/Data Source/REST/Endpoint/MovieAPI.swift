@@ -62,10 +62,10 @@ extension MovieAPI: MovieTargetType {
     var parameters: [String : Any]? {
         switch self {
         case .upcomingMovies(let page):
-            return ["api_key": "1f54bd990f1cdfb230adb312546d765d", "page": page]
+            return ["api_key": API_KEY, "page": page]
         case .search(let movie):
-            return ["api_key": "1f54bd990f1cdfb230adb312546d765d", "query": movie]
-        default: return ["api_key": "1f54bd990f1cdfb230adb312546d765d"]
+            return ["api_key": API_KEY, "query": movie]
+        default: return ["api_key": API_KEY]
         }
     }
     

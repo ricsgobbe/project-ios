@@ -19,6 +19,11 @@ struct MoviePlugins: PluginType {
 
 protocol MovieTargetType: TargetType {}
 extension MovieTargetType {
+    
+    var API_KEY: String {
+        return "1f54bd990f1cdfb230adb312546d765d"
+    }
+    
     private var baseURL: URL {
         return URL(string: "https://api.themoviedb.org/3/movie/")!
     }

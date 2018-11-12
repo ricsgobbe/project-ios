@@ -29,10 +29,8 @@ class MovieDetailPresenter: MovieDetailPresenterProtocol {
     }
     
     func getMovieDetail(id: Int) {
-        if isConnectedToInternet() {
-            movieUseCase.displayMovieDetail(id: id) { [weak self] (details, error) in
-                self?.displayingValues(details: details, error: error)
-            }
+        movieUseCase.displayMovieDetail(id: id) { [weak self] (details, error) in
+            self?.displayingValues(details: details, error: error)
         }
     }
     
@@ -51,14 +49,14 @@ class MovieDetailPresenter: MovieDetailPresenterProtocol {
             }
         } else {
             self.view.showMsg(message: .error)
-            self.view.showError(message: "Tap on the screen to reload.")
+            self.view.showError(message: "Something unexpected happened.")
         }
     }
     
-    
-    fileprivate func isConnectedToInternet() -> Bool {
-        return NetworkManager.isConnectedToInternet(controller: view as! UIViewController)
+    fileprivate func isConnectedToInternet() {
+        if !NetworkManager.isConnectedToInternet(controller: view as! UIViewController) {
+            return
+        }
     }
-    
 }
 

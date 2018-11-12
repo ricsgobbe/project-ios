@@ -13,7 +13,7 @@ protocol UpcomingMoviesViewProtocol: class, LoadingView {
     var coordinator: Coordinator! {get set}
     var presenter: UpcomingMovieProtocol! {get set}
     
-    func showMovieList(movies: [Movie])
+    func showMovieList()
     func showMsg(message: AlertTypes)
 }
 
@@ -88,6 +88,7 @@ class UpcomingMoviesView: UIViewController, StoryboardSceneBased {
     
     fileprivate func setupBottomIndicatorView() {
         let spinner = UIActivityIndicatorView(style: .gray)
+        spinner.color = ColorPalette.mainColor
         spinner.startAnimating()
         spinner.frame = CGRect(x: CGFloat(0), y: CGFloat(0), width: movieDetailTableView.bounds.width, height: CGFloat(44))
         
@@ -158,7 +159,7 @@ extension UpcomingMoviesView: UpcomingMoviesViewProtocol {
         presenter.fetchMovies()
     }
     
-    func showMovieList(movies: [Movie]) {
+    func showMovieList() {
         self.movieDetailTableView.reloadData()
         stopLoading()
         endSwipePull()
