@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="250" id="zAg-7X-dBj" customClass="MovieInfoTableViewCell" customModule="CodeChallenge" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="250"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zAg-7X-dBj" id="zqI-7Y-uW9">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="249.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Pirates of Caribbean" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VAc-q5-KUw">
+                        <rect key="frame" x="16" y="22" width="220.5" height="31.5"/>
+                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="23"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Thriller, Comedia" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2NY-fQ-Znm">
+                        <rect key="frame" x="16" y="61.5" width="288" height="20.5"/>
+                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="27/01/1994" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HwP-zk-zvH">
+                        <rect key="frame" x="251" y="0.0" width="63" height="17"/>
+                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="blabalbalbalablablabablabalbalbalablablabablabalbalbalablablabablabalbalbalablablabablabalbalbalablablaba" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tAh-tx-9fu">
+                        <rect key="frame" x="22" y="114" width="269" height="81.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" red="0.97254901959999995" green="0.97254901959999995" blue="0.97254901959999995" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstItem="HwP-zk-zvH" firstAttribute="top" secondItem="zqI-7Y-uW9" secondAttribute="top" id="2cp-Wo-muh"/>
+                    <constraint firstAttribute="trailing" secondItem="HwP-zk-zvH" secondAttribute="trailing" constant="6" id="9n1-iP-ePy"/>
+                    <constraint firstItem="VAc-q5-KUw" firstAttribute="top" secondItem="zqI-7Y-uW9" secondAttribute="topMargin" constant="11" id="FSV-Cz-Neq"/>
+                    <constraint firstItem="VAc-q5-KUw" firstAttribute="leading" secondItem="zqI-7Y-uW9" secondAttribute="leadingMargin" id="HOS-I0-M6E"/>
+                    <constraint firstItem="2NY-fQ-Znm" firstAttribute="top" secondItem="VAc-q5-KUw" secondAttribute="bottom" constant="8" id="Jdc-UM-vwP"/>
+                    <constraint firstItem="2NY-fQ-Znm" firstAttribute="leading" secondItem="zqI-7Y-uW9" secondAttribute="leadingMargin" id="Pft-jj-2WS"/>
+                    <constraint firstItem="tAh-tx-9fu" firstAttribute="top" secondItem="2NY-fQ-Znm" secondAttribute="bottom" constant="31.5" id="RZ2-Hs-RzS"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="tAh-tx-9fu" secondAttribute="trailing" constant="13" id="SIJ-ek-NXO"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="2NY-fQ-Znm" secondAttribute="trailing" id="fV6-pZ-aCx"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="VAc-q5-KUw" secondAttribute="trailing" constant="67.5" id="qTL-sd-Bxo"/>
+                    <constraint firstItem="tAh-tx-9fu" firstAttribute="leading" secondItem="zqI-7Y-uW9" secondAttribute="leadingMargin" constant="6" id="uGq-C9-WiM"/>
+                    <constraint firstAttribute="bottom" secondItem="tAh-tx-9fu" secondAttribute="bottom" constant="54" id="zz6-Ct-WXO"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="RRR-KG-0rb"/>
+            <connections>
+                <outlet property="movieTitle" destination="VAc-q5-KUw" id="0QI-PB-J59"/>
+                <outlet property="overview" destination="tAh-tx-9fu" id="JMn-FD-HMc"/>
+                <outlet property="releaseDate" destination="HwP-zk-zvH" id="7Jl-4r-bNv"/>
+                <outlet property="titleGenre" destination="2NY-fQ-Znm" id="tB8-jU-myJ"/>
+            </connections>
+            <point key="canvasLocation" x="34" y="157"/>
+        </tableViewCell>
+    </objects>
+</document>

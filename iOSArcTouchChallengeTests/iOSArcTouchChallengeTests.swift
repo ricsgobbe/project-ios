@@ -6,29 +6,62 @@
 //  Copyright © 2018 Ricardo Sgobbe. All rights reserved.
 //
 
-import XCTest
 @testable import iOSArcTouchChallenge
 
-class iOSArcTouchChallengeTests: XCTestCase {
+import Quick
+import Nimble
 
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+class iOSArcTouchChallengeTests: QuickSpec {
+    
+    class FakeDataSource: MovieDatasourceProtocol {
+        func getApiConfiguration(completion: @escaping (iOSArcTouchChallenge.Configuration?, Error?) -> Void) {
+            completion(nil, nil)
         }
+        
+        func fetchGenreList(completion: @escaping ([Genre]?, Error?) -> Void) {
+            let genre: [Genre] = []
+            completion(genre, nil)
+        }
+        
+        func fetchUpcomingMovie(page: Int, completion: @escaping (MovieResponse?, Error?) -> Void) {
+            
+        }
+        
+        func getMovieDetailsWith(id: Int, completion: @escaping (MovieDetail?, Error?) -> Void) {
+            
+        }
+        
+        func search(movie: String, completion: @escaping (MovieResponse?, Error?) -> Void) {
+            
+        }
+        
+        
+    }
+    
+    override func spec() {
+       let repository = MovieRepository()
+        repository.datasource = FakeDataSource()
+        describe("Validating datasource") {
+            
+            context("testing getConfig object", closure: {
+                it("should be nil", closure: {
+                    repository.downloadConfigObj(completion: { (config, error) in
+                        expect(config).to(beNil())
+                    })
+                })
+            })
+            
+            
+            context("testing getGenreList", closure: {
+                it("should return a empty array", closure: {
+                    repository.downloadGenreList(completion: { (genres, error) in
+                        expect(genres).to(beEmpty())
+                    })
+                })
+            })
+            
+        }
+        
     }
 
 }
