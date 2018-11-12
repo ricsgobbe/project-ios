@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		01D8E1F33C315F7A4030A834 /* Pods_iOSArcTouchChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5097363F3CC2B0E798E0739 /* Pods_iOSArcTouchChallenge.framework */; };
 		04A69847219658C80071C9C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A69846219658C80071C9C5 /* AppDelegate.swift */; };
 		04A6984E219658CB0071C9C5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04A6984D219658CB0071C9C5 /* Assets.xcassets */; };
 		04A69851219658CB0071C9C5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04A6984F219658CB0071C9C5 /* LaunchScreen.storyboard */; };
@@ -49,8 +48,8 @@
 		04FE7F4C2198AAB6000010D1 /* MovieDetailTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE7F4B2198AAB6000010D1 /* MovieDetailTableView.swift */; };
 		04FE7F4E2198ABA5000010D1 /* MovieDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE7F4D2198ABA5000010D1 /* MovieDetailPresenter.swift */; };
 		04FE7F512198AFED000010D1 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FE7F502198AFED000010D1 /* MainCoordinator.swift */; };
-		930DB605D5DDFACBDC9C6A83 /* Pods_iOSArcTouchChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9A8FAE4297F5FE2D2B30EF8 /* Pods_iOSArcTouchChallengeTests.framework */; };
-		C860E108B470BA6FBFEE4B33 /* Pods_iOSArcTouchChallenge_iOSArcTouchChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C06E03AA822F3A69CB737B4 /* Pods_iOSArcTouchChallenge_iOSArcTouchChallengeTests.framework */; };
+		0C2F66DB6938E7700D33E912 /* Pods_iOSArcTouchChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DD627CB35EFDEDFD4A89B41 /* Pods_iOSArcTouchChallengeTests.framework */; };
+		F09C88EC037A71F724854FA9 /* Pods_iOSArcTouchChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3663CA0881D1BF1D7FB34059 /* Pods_iOSArcTouchChallenge.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,15 +108,12 @@
 		04FE7F4B2198AAB6000010D1 /* MovieDetailTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailTableView.swift; sourceTree = "<group>"; };
 		04FE7F4D2198ABA5000010D1 /* MovieDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailPresenter.swift; sourceTree = "<group>"; };
 		04FE7F502198AFED000010D1 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
-		15736FFA17457C545F8D1B01 /* Pods-iOSArcTouchChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSArcTouchChallengeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSArcTouchChallengeTests/Pods-iOSArcTouchChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
-		375D29A425BA63FBEEE035F9 /* Pods-iOSArcTouchChallenge-iOSArcTouchChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSArcTouchChallenge-iOSArcTouchChallengeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSArcTouchChallenge-iOSArcTouchChallengeTests/Pods-iOSArcTouchChallenge-iOSArcTouchChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
-		4406003EDEAC1E9EAA5541AB /* Pods-iOSArcTouchChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSArcTouchChallengeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSArcTouchChallengeTests/Pods-iOSArcTouchChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
-		6E0D7EF583EAFCC21C412D3C /* Pods-iOSArcTouchChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSArcTouchChallenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSArcTouchChallenge/Pods-iOSArcTouchChallenge.debug.xcconfig"; sourceTree = "<group>"; };
-		9C06E03AA822F3A69CB737B4 /* Pods_iOSArcTouchChallenge_iOSArcTouchChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSArcTouchChallenge_iOSArcTouchChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CBA453EBF0BE495D4D98033F /* Pods-iOSArcTouchChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSArcTouchChallenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSArcTouchChallenge/Pods-iOSArcTouchChallenge.release.xcconfig"; sourceTree = "<group>"; };
-		D9A8FAE4297F5FE2D2B30EF8 /* Pods_iOSArcTouchChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSArcTouchChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DDF34F0D4228006D01A7C0C6 /* Pods-iOSArcTouchChallenge-iOSArcTouchChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSArcTouchChallenge-iOSArcTouchChallengeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSArcTouchChallenge-iOSArcTouchChallengeTests/Pods-iOSArcTouchChallenge-iOSArcTouchChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
-		E5097363F3CC2B0E798E0739 /* Pods_iOSArcTouchChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSArcTouchChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		26C4766AD7107853F892B038 /* Pods-iOSArcTouchChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSArcTouchChallenge.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSArcTouchChallenge/Pods-iOSArcTouchChallenge.debug.xcconfig"; sourceTree = "<group>"; };
+		3663CA0881D1BF1D7FB34059 /* Pods_iOSArcTouchChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSArcTouchChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DD627CB35EFDEDFD4A89B41 /* Pods_iOSArcTouchChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSArcTouchChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		84CAF11B47DF3D3C2A36E3D8 /* Pods-iOSArcTouchChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSArcTouchChallengeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-iOSArcTouchChallengeTests/Pods-iOSArcTouchChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9E7309F0D39DE1775249D8EC /* Pods-iOSArcTouchChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSArcTouchChallenge.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSArcTouchChallenge/Pods-iOSArcTouchChallenge.release.xcconfig"; sourceTree = "<group>"; };
+		C5477E20FC411E73ECCA59E6 /* Pods-iOSArcTouchChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSArcTouchChallengeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-iOSArcTouchChallengeTests/Pods-iOSArcTouchChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,7 +121,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01D8E1F33C315F7A4030A834 /* Pods_iOSArcTouchChallenge.framework in Frameworks */,
+				F09C88EC037A71F724854FA9 /* Pods_iOSArcTouchChallenge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,8 +129,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				930DB605D5DDFACBDC9C6A83 /* Pods_iOSArcTouchChallengeTests.framework in Frameworks */,
-				C860E108B470BA6FBFEE4B33 /* Pods_iOSArcTouchChallenge_iOSArcTouchChallengeTests.framework in Frameworks */,
+				0C2F66DB6938E7700D33E912 /* Pods_iOSArcTouchChallengeTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,8 +142,8 @@
 				04A69845219658C80071C9C5 /* iOSArcTouchChallenge */,
 				04A6985A219658CB0071C9C5 /* iOSArcTouchChallengeTests */,
 				04A69844219658C80071C9C5 /* Products */,
-				79491BC01298FF8F060EC2DB /* Pods */,
-				6A8C20BF6563FFFA247BFA80 /* Frameworks */,
+				D19AF829812E4F122E3BDF7D /* Pods */,
+				2246A3AC7425EB7A8FEEB174 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -386,25 +381,22 @@
 			path = Coordinator;
 			sourceTree = "<group>";
 		};
-		6A8C20BF6563FFFA247BFA80 /* Frameworks */ = {
+		2246A3AC7425EB7A8FEEB174 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E5097363F3CC2B0E798E0739 /* Pods_iOSArcTouchChallenge.framework */,
-				D9A8FAE4297F5FE2D2B30EF8 /* Pods_iOSArcTouchChallengeTests.framework */,
-				9C06E03AA822F3A69CB737B4 /* Pods_iOSArcTouchChallenge_iOSArcTouchChallengeTests.framework */,
+				3663CA0881D1BF1D7FB34059 /* Pods_iOSArcTouchChallenge.framework */,
+				5DD627CB35EFDEDFD4A89B41 /* Pods_iOSArcTouchChallengeTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		79491BC01298FF8F060EC2DB /* Pods */ = {
+		D19AF829812E4F122E3BDF7D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				6E0D7EF583EAFCC21C412D3C /* Pods-iOSArcTouchChallenge.debug.xcconfig */,
-				CBA453EBF0BE495D4D98033F /* Pods-iOSArcTouchChallenge.release.xcconfig */,
-				15736FFA17457C545F8D1B01 /* Pods-iOSArcTouchChallengeTests.debug.xcconfig */,
-				4406003EDEAC1E9EAA5541AB /* Pods-iOSArcTouchChallengeTests.release.xcconfig */,
-				DDF34F0D4228006D01A7C0C6 /* Pods-iOSArcTouchChallenge-iOSArcTouchChallengeTests.debug.xcconfig */,
-				375D29A425BA63FBEEE035F9 /* Pods-iOSArcTouchChallenge-iOSArcTouchChallengeTests.release.xcconfig */,
+				26C4766AD7107853F892B038 /* Pods-iOSArcTouchChallenge.debug.xcconfig */,
+				9E7309F0D39DE1775249D8EC /* Pods-iOSArcTouchChallenge.release.xcconfig */,
+				84CAF11B47DF3D3C2A36E3D8 /* Pods-iOSArcTouchChallengeTests.debug.xcconfig */,
+				C5477E20FC411E73ECCA59E6 /* Pods-iOSArcTouchChallengeTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -416,11 +408,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04A69860219658CB0071C9C5 /* Build configuration list for PBXNativeTarget "iOSArcTouchChallenge" */;
 			buildPhases = (
-				04D14FDBE4431643C61FDEC2 /* [CP] Check Pods Manifest.lock */,
+				D7DA26F4DAF00EB85E5CFFD2 /* [CP] Check Pods Manifest.lock */,
 				04A6983F219658C80071C9C5 /* Sources */,
 				04A69840219658C80071C9C5 /* Frameworks */,
 				04A69841219658C80071C9C5 /* Resources */,
-				ACE4E5E26CD7049FE8681D6C /* [CP] Embed Pods Frameworks */,
+				53809963AA0C6A0E1728D806 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -435,11 +427,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 04A69863219658CB0071C9C5 /* Build configuration list for PBXNativeTarget "iOSArcTouchChallengeTests" */;
 			buildPhases = (
-				1EE61B0B297E3A671FF48B14 /* [CP] Check Pods Manifest.lock */,
+				C7785F045C24D839861BAD20 /* [CP] Check Pods Manifest.lock */,
 				04A69853219658CB0071C9C5 /* Sources */,
 				04A69854219658CB0071C9C5 /* Frameworks */,
 				04A69855219658CB0071C9C5 /* Resources */,
-				F27C8A3653E9F8DEF02837BF /* [CP] Embed Pods Frameworks */,
+				20E107902C761147D3795A44 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -514,7 +506,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		04D14FDBE4431643C61FDEC2 /* [CP] Check Pods Manifest.lock */ = {
+		20E107902C761147D3795A44 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -522,43 +514,23 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
+				"${SRCROOT}/Pods/Target Support Files/Pods-iOSArcTouchChallengeTests/Pods-iOSArcTouchChallengeTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
 			);
-			name = "[CP] Check Pods Manifest.lock";
+			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-iOSArcTouchChallenge-checkManifestLockResult.txt",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOSArcTouchChallengeTests/Pods-iOSArcTouchChallengeTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		1EE61B0B297E3A671FF48B14 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-iOSArcTouchChallengeTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		ACE4E5E26CD7049FE8681D6C /* [CP] Embed Pods Frameworks */ = {
+		53809963AA0C6A0E1728D806 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -592,7 +564,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOSArcTouchChallenge/Pods-iOSArcTouchChallenge-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F27C8A3653E9F8DEF02837BF /* [CP] Embed Pods Frameworks */ = {
+		C7785F045C24D839861BAD20 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -600,20 +572,40 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-iOSArcTouchChallengeTests/Pods-iOSArcTouchChallengeTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
-				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Check Pods Manifest.lock";
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
+				"$(DERIVED_FILE_DIR)/Pods-iOSArcTouchChallengeTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-iOSArcTouchChallengeTests/Pods-iOSArcTouchChallengeTests-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D7DA26F4DAF00EB85E5CFFD2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iOSArcTouchChallenge-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -807,7 +799,7 @@
 		};
 		04A69861219658CB0071C9C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6E0D7EF583EAFCC21C412D3C /* Pods-iOSArcTouchChallenge.debug.xcconfig */;
+			baseConfigurationReference = 26C4766AD7107853F892B038 /* Pods-iOSArcTouchChallenge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -825,7 +817,7 @@
 		};
 		04A69862219658CB0071C9C5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CBA453EBF0BE495D4D98033F /* Pods-iOSArcTouchChallenge.release.xcconfig */;
+			baseConfigurationReference = 9E7309F0D39DE1775249D8EC /* Pods-iOSArcTouchChallenge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -843,7 +835,7 @@
 		};
 		04A69864219658CB0071C9C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 15736FFA17457C545F8D1B01 /* Pods-iOSArcTouchChallengeTests.debug.xcconfig */;
+			baseConfigurationReference = 84CAF11B47DF3D3C2A36E3D8 /* Pods-iOSArcTouchChallengeTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -864,7 +856,7 @@
 		};
 		04A69865219658CB0071C9C5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4406003EDEAC1E9EAA5541AB /* Pods-iOSArcTouchChallengeTests.release.xcconfig */;
+			baseConfigurationReference = C5477E20FC411E73ECCA59E6 /* Pods-iOSArcTouchChallengeTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
