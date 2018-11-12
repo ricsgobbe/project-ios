@@ -9,7 +9,7 @@
 import Foundation
 
 
-protocol MovieCacheDatasourceProtocol {
+protocol MovieCacheDatasourceProtocol: class {
     
     func saveConfiguration(config: Configuration)
     func retrieveConfiguration() -> Configuration?

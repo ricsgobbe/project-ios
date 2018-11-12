@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iOSArcTouchChallenge/Presentation/Movie/Presenter/UpcomingMoviesPresenter.swift"
+            timestampString = "563727732.1822799"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "downloadGenresList()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iOSArcTouchChallenge/Presentation/Movie/Presenter/UpcomingMoviesPresenter.swift"
+            timestampString = "563727732.183145"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "init(view:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "iOSArcTouchChallenge/Presentation/Movie/Presenter/MovieDetailPresenter.swift"
+            timestampString = "563727732.183547"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "getMovieDetail(id:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "iOSArcTouchChallenge.MovieDetailPresenter.getMovieDetail(id: Swift.Int) -&gt; ()"
+                  moduleName = "iOSArcTouchChallenge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ricardosgobbe/Development/project-ios/iOSArcTouchChallenge/Presentation/Movie/Presenter/MovieDetailPresenter.swift"
+                  timestampString = "563726317.026631"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "37">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;iOSArcTouchChallenge.MovieDetail&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in iOSArcTouchChallenge.MovieDetailPresenter.getMovieDetail(id: Swift.Int) -&gt; ()"
+                  moduleName = "iOSArcTouchChallenge"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ricardosgobbe/Development/project-ios/iOSArcTouchChallenge/Presentation/Movie/Presenter/MovieDetailPresenter.swift"
+                  timestampString = "563726317.0294729"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "56">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
