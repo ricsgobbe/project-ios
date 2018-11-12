@@ -8,9 +8,9 @@
 
 import UIKit
 
-protocol Coordinator {
+protocol Coordinator: class {
     var childCoordinators: [Coordinator] { get set }
-    var navigationController: CustomNavigationBar { get set }
+    var navigationController: CustomNavigationBar? { get set }
     
     func start()
     func showMovieDetails(id: Int)
@@ -19,7 +19,7 @@ protocol Coordinator {
 class MainCoordinator: Coordinator {
     
     var childCoordinators = [Coordinator]()
-    var navigationController: CustomNavigationBar
+    weak var navigationController: CustomNavigationBar?
     
     init(navigationController: CustomNavigationBar) {
         self.navigationController = navigationController
@@ -28,13 +28,13 @@ class MainCoordinator: Coordinator {
     func start() {
         let controller = UpcomingMoviesView.instantiate()
         controller.coordinator = self
-        navigationController.pushViewController(controller, animated: false)
+        navigationController?.pushViewController(controller, animated: false)
     }
     
     func showMovieDetails(id: Int) {
         let controller = MovieDetailTableView.instantiate()
         controller.coordinator = self
-        navigationController.pushViewController(controller, animated: true)
+        navigationController?.pushViewController(controller, animated: true)
         controller.getMovieDetail(id: id)
     }
     

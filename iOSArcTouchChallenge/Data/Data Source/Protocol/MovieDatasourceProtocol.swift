@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol MovieDatasourceProtocol {
+protocol MovieDatasourceProtocol: class {
     
     func getApiConfiguration(completion: @escaping (Configuration?, Error?) -> Void)
     func fetchGenreList(completion: @escaping ([Genre]?, Error?) -> Void)

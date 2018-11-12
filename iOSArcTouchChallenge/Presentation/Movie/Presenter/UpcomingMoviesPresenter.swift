@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol UpcomingMovieProtocol {
+protocol UpcomingMovieProtocol: class {
     var view: UpcomingMoviesView! {get set}
     var useCase: MovieUseCases! {get set}
     var upcomingMovie: [Movie]! {get set}
@@ -27,7 +27,7 @@ protocol UpcomingMovieProtocol {
 class UpcomingMoviesPresenter: UpcomingMovieProtocol {
     
     var useCase: MovieUseCases!
-    var view: UpcomingMoviesView!
+    weak var view: UpcomingMoviesView!
     var upcomingMovie: [Movie]!
     var movieResult: MovieResponse?
     
