@@ -20,7 +20,7 @@ protocol MovieDetailPresenterProtocol: class {
 
 
 class MovieDetailPresenter: MovieDetailPresenterProtocol {
-    var view: MovieDetailTableViewProtocol!
+    weak var view: MovieDetailTableViewProtocol!
     var movieUseCase: MovieUseCases!
     
     init(view: MovieDetailTableViewProtocol) {

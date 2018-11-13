@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol MovieRepositoryProtocol {
+protocol MovieRepositoryProtocol: class {
     
     var datasource: MovieDatasourceProtocol! {get set}
     

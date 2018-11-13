@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol MovieCacheRepositoryProtocol {
+protocol MovieCacheRepositoryProtocol: class {
     
     var cacheDatasource: MovieCacheDatasourceProtocol! {get set}
     
